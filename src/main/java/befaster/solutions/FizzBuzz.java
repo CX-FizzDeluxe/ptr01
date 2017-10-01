@@ -23,6 +23,7 @@ public class FizzBuzz {
         boolean isBuzz = number % 5 == 0 || numberString.contains("5");
         //TODO: Refactor
         HashMap<String, Boolean> map = new HashMap<>();
+        String[] keys = new String[] {"fizz", "buzz", "deluxe", "fake deluxe"};
         List<String> retval = new ArrayList<>();
         if (isFizz) {
             retval.add("fizz");
