@@ -36,8 +36,7 @@ public class FizzBuzz {
     
     public static boolean isAllMatch(String number) {
         List<String> list = Arrays.asList(number.split(""));
-        System.out.println(list);
-        return false;
+        return list.stream().collect(Collectors.toSet()).size() == 1;
     }
 
 }
