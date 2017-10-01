@@ -20,6 +20,9 @@ public class FizzBuzz {
         if (isFizz && isBuzz) {
             return "fizz buzz";
         }
+        if (isDeluxe) {
+            return "deluxe";
+        }
         if (isFizz) {
             return "fizz";
         }

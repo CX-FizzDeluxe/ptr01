@@ -9,7 +9,10 @@ public class FizzBuzzTest {
 
     @Test
     public void compute_sum() {
-        assertThat(FizzBuzz.fizzBuzz(31), equalTo("fizz"));
+        assertThat(FizzBuzz.fizzBuzz(33), equalTo("deluxe"));
+        assertThat(FizzBuzz.fizzBuzz(11), equalTo("deluxe"));
+        assertThat(FizzBuzz.fizzBuzz(555), equalTo("fizz buzz deluxe"));
+        assertThat(FizzBuzz.fizzBuzz(1), equalTo("1"));
     }
     
     @Test
