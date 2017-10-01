@@ -14,11 +14,11 @@ public class FizzBuzz {
     public static String fizzBuzz(Integer number) {
         String numberString = number.toString();
         
-        boolean isFizz = number % 3 == 0;
-        boolean isBuzz = number % 5 == 0;
+        boolean isFizz = number % 3 == 0 || numberString.contains("3");
+        boolean isBuzz = number % 5 == 0 || numberString.contains("5");
         
-        boolean isDeluxe = (isFizz && numberString.contains("3")) ||
-                (isBuzz && numberString.contains("5"));
+        boolean isDeluxe = (number % 5 == 0 && numberString.contains("3")) ||
+                (number % 5 == 0 && numberString.contains("5"));
         boolean isFakeDeluxe = false;
         if (isDeluxe && (number % 2 == 1)) {
             isFakeDeluxe = true;
