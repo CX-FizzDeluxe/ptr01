@@ -15,7 +15,7 @@ public class FizzBuzz {
                 .collect(Collectors.toSet())
                 .size() == 1;
 
-        boolean isDeluxe = number > 0 && isAllMatch;
+        boolean isDeluxe = number > 10 && isAllMatch;
         boolean isFizz = number % 3 == 0 || numberString.contains("3");
         boolean isBuzz = number % 5 == 0 || numberString.contains("5");
         if (isFizz && isBuzz && isDeluxe) {
