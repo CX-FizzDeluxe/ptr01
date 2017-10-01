@@ -15,6 +15,9 @@ public class FizzBuzz {
         boolean isFizz = number % 3 == 0 || numberString.contains("3");
         boolean isBuzz = number % 5 == 0 || numberString.contains("5");
         //TODO: Refactor
+        Boolean[] bools = new Boolean[] {
+            isFizz, isBuzz, isDeluxe
+        };
         if (isFizz && isBuzz && isDeluxe) {
             return "fizz buzz deluxe";
         }
