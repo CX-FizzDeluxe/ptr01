@@ -17,8 +17,9 @@ public class FizzBuzz {
         boolean isFizz = number % 3 == 0 || numberString.contains("3");
         boolean isBuzz = number % 5 == 0 || numberString.contains("5");
         
-        boolean isDeluxe = (number % 5 == 0 && numberString.contains("3")) ||
+        boolean isDeluxe = (number % 3 == 0 && numberString.contains("3")) ||
                 (number % 5 == 0 && numberString.contains("5"));
+
         boolean isFakeDeluxe = false;
         if (isDeluxe && (number % 2 == 1)) {
             isFakeDeluxe = true;
