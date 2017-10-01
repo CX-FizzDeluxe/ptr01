@@ -12,32 +12,23 @@ public class FizzBuzz {
     public static String fizzBuzz(Integer number) {
         String numberString = number.toString();
         boolean isDeluxe = number > 10 && isAllMatch(numberString);
+        boolean isFakeDeluxe = false;
+        if (isDeluxe && (number % 2 == 1)) {
+            isFakeDeluxe = true;
+            isDeluxe = false;
+        }
         boolean isFizz = number % 3 == 0 || numberString.contains("3");
         boolean isBuzz = number % 5 == 0 || numberString.contains("5");
         //TODO: Refactor
         Boolean[] bools = new Boolean[] {
-            isFizz, isBuzz, isDeluxe
+            isFizz, isBuzz, isDeluxe, isFakeDeluxe
         };
-        if (isFizz && isBuzz && isDeluxe) {
-            return "fizz buzz deluxe";
-        }
-        if (isFizz && isDeluxe) {
-            return "fizz deluxe";
-        }
-        if (isFizz && isBuzz) {
-            return "fizz buzz";
-        }
-        if (isBuzz && isDeluxe) {
-            return "buzz deluxe";
-        }
-        if (isDeluxe) {
-            return "deluxe";
-        }
-        if (isFizz) {
-            return "fizz";
-        }
-        if (isBuzz) {
-            return "buzz";
+        String retval = "";
+        
+        
+        
+        if (retval.length() > 0) {
+            return retval;
         }
         return numberString;
     }
