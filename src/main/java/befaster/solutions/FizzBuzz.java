@@ -1,6 +1,7 @@
 package befaster.solutions;
 
 import befaster.runner.SolutionNotImplementedException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -27,13 +28,11 @@ public class FizzBuzz {
         map.put("deluxe", isDeluxe);
         map.put("fake deluxe", isFakeDeluxe);
         
-        List<String> retval = map.entrySet().stream().map(entry -> {
-            if (entry.getValue()) {
-                return entry.getKey();
-            }
-        }).collect(Collectors.toList());
+        List<String> retval = new ArrayList<>();
+        map.forEach((k, v) -> {
+        });
         
-        if (retval.length() > 0) {
+        if (retval.size()> 0) {
             return retval.join(" ");
         }
         return numberString;
