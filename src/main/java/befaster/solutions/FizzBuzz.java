@@ -23,17 +23,22 @@ public class FizzBuzz {
         boolean isBuzz = number % 5 == 0 || numberString.contains("5");
         //TODO: Refactor
         HashMap<String, Boolean> map = new HashMap<>();
-        map.put("fizz", isFizz);
-        map.put("buzz", isBuzz);
-        map.put("deluxe", isDeluxe);
-        map.put("fake deluxe", isFakeDeluxe);
-        
         List<String> retval = new ArrayList<>();
-        map.forEach((k, v) -> {
-        });
+        if (isFizz) {
+            retval.add("fizz");
+        }
+        if (isBuzz) {
+            retval.add("buzz");
+        }
+        if (isDeluxe) {
+            retval.add("deluxe");
+        }
+        if (isFakeDeluxe) {
+            retval.add("fake deluxe");
+        }
         
         if (retval.size()> 0) {
-            return retval.join(" ");
+            return retval.stream().collect(Collectors.joining(" "));
         }
         return numberString;
     }
