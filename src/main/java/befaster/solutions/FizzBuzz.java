@@ -25,18 +25,18 @@ public class FizzBuzz {
         HashMap<String, Boolean> map = new HashMap<>();
         String[] keys = new String[] {"fizz", "buzz", "deluxe", "fake deluxe"};
         List<String> retval = new ArrayList<>();
-        if (isFizz) {
-            retval.add("fizz");
+        HashMap<String, Boolean> hashMap = new HashMap<>();
+        hashMap.put("fizz", isFizz);
+        hashMap.put("buzz", isBuzz);
+        hashMap.put("deluxe", isDeluxe);
+        hashMap.put("fake deluxe", isFakeDeluxe);
+        
+        for (String key : keys) {
+            if (hashMap.get(key)) {
+                retval.add(key);
+            }
         }
-        if (isBuzz) {
-            retval.add("buzz");
-        }
-        if (isDeluxe) {
-            retval.add("deluxe");
-        }
-        if (isFakeDeluxe) {
-            retval.add("fake deluxe");
-        }
+
         
         if (retval.size()> 0) {
             return retval.stream().collect(Collectors.joining(" "));
