@@ -14,11 +14,18 @@ public class FizzBuzz {
         boolean isDeluxe = number > 10 && isAllMatch(numberString);
         boolean isFizz = number % 3 == 0 || numberString.contains("3");
         boolean isBuzz = number % 5 == 0 || numberString.contains("5");
+        //TODO: Refactor
         if (isFizz && isBuzz && isDeluxe) {
             return "fizz buzz deluxe";
         }
+        if (isFizz && isDeluxe) {
+            return "fizz deluxe";
+        }
         if (isFizz && isBuzz) {
             return "fizz buzz";
+        }
+        if (isBuzz && isDeluxe) {
+            return "buzz deluxe";
         }
         if (isDeluxe) {
             return "deluxe";
